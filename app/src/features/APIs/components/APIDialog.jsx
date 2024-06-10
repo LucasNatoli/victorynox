@@ -64,7 +64,7 @@ export function APIDialog({ open, handleClose, handleSubmit }) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancelaar</Button>
+          <Button onClick={handleClose}>Cancelar</Button>
           <Button type="submit"> Guardar </Button>
         </DialogActions>
       </Dialog>
