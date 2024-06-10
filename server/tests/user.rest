@@ -1,0 +1,56 @@
+
+GET http://localhost:4000/user/apis HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+
+POST http://localhost:4000/user/apis HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+{
+    "n": "lucas.natoli@gmail.com",
+    "k": "8095a852d11d763c35a6261f8e8babc6894443bc0af566f1c612cc2ea756cb3004159cab763a9c1ec1cc1161aaa6d887ec41b95435661085d663d5fc97ac2b46",
+    "s": "8095a852d11d763c35a6261f8e8babc6894443bc0af566f1c612cc2ea756cb3004159cab763a9c1ec1cc1161aaa6d887ec41b95435661085d663d5fc97ac2b46"
+}
+
+
+PUT http://localhost:4000/user/apis HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+{
+    "t": 1718045251370,
+    "n": "prueba OK",
+    "k": "8095a852d11d763c35a6261f8e8babc6894443bc0af566f1c612cc2ea756cb3004159cab763a9c1ec1cc1161aaa6d887ec41b95435661085d663d5fc97ac2b46",
+    "s": "8095a852d11d763c35a6261f8e8babc6894443bc0af566f1c612cc2ea756cb3004159cab763a9c1ec1cc1161aaa6d887ec41b95435661085d663d5fc97ac2b46"
+}
+
+
+DELETE http://localhost:4000/user/apis HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+{
+    "t": 1718045251370
+}
+
+
+
+
+
+POST http://localhost:4000/user/favorites HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+{
+    "symbol": "AVAXUSDT"
+}
+
+GET http://localhost:4000/user/favorites HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json
+
+GET http://localhost:4000/user/assets HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+content-type: application/json

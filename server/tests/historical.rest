@@ -1,0 +1,27 @@
+# Mensual
+GET http://localhost:4000/history/fetch/monthly/BTCUSDT/4h/2024/04 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDY5Mjk4MDUsImV4cCI6MTcwNzAxNjIwNX0.8x21NaBsnatN4nd0Elp3eSaEU-edz1Nmyr1AcaevOyI
+
+content-type: application/json
+
+# Diario
+GET http://localhost:4000/history/fetch/daily/AVAXUSDT/4h/2023/10/02 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDY5Mjk4MDUsImV4cCI6MTcwNzAxNjIwNX0.8x21NaBsnatN4nd0Elp3eSaEU-edz1Nmyr1AcaevOyI
+content-type: application/json
+
+
+# Mensual desde hasta
+GET http://localhost:4000/history/fetch/monthly/BTCUSDT/4h/2023/10/2024/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDY5Mjk4MDUsImV4cCI6MTcwNzAxNjIwNX0.8x21NaBsnatN4nd0Elp3eSaEU-edz1Nmyr1AcaevOyI
+content-type: application/json
+
+# Diario desde hasta
+GET http://localhost:4000/history/fetch/daily/BTCUSDT/1h/2023/12/01/2023/12/10 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDY5Mjk4MDUsImV4cCI6MTcwNzAxNjIwNX0.8x21NaBsnatN4nd0Elp3eSaEU-edz1Nmyr1AcaevOyI
+content-type: application/json
+
+
+
+GET http://localhost:4000/history HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDY5Mjk4MDUsImV4cCI6MTcwNzAxNjIwNX0.8x21NaBsnatN4nd0Elp3eSaEU-edz1Nmyr1AcaevOyI
+content-type: application/json

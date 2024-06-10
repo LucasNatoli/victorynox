@@ -1,0 +1,14 @@
+GET http://localhost:4000/service/symbols HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDcyNTExODcsImV4cCI6MTcwNzMzNzU4N30.n7uFwqHJGsRT09geWqP76WPOnX9mqRpGU59GP4eeJ-w
+content-type: application/json
+
+GET http://localhost:4000/service/pairs HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDcyNTExODcsImV4cCI6MTcwNzMzNzU4N30.n7uFwqHJGsRT09geWqP76WPOnX9mqRpGU59GP4eeJ-w
+content-type: application/json
+
+
+
+GET http://localhost:4000/service/ticker?symbols=["BTCUSDT", "BNBUSDT", "AVAXUSDT", "AXSUSDT"] HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MDcyNTExODcsImV4cCI6MTcwNzMzNzU4N30.n7uFwqHJGsRT09geWqP76WPOnX9mqRpGU59GP4eeJ-w
+content-type: application/json
+ 
