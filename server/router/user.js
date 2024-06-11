@@ -62,6 +62,10 @@ function getFavs(req, res) {
   }
 }
 
+function updateFav (req, res){
+  
+}
+
 function getAssets(req, res) {
   const path = `${req.decoded.userFolder}/${config.ASSETS_FOLDER}`;
   if (!existsSync(path)) return [];
