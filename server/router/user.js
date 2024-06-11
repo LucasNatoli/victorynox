@@ -63,7 +63,35 @@ function getFavs(req, res) {
 }
 
 function updateFav (req, res){
-  
+  //hacer lo mismo que updateApi pero con el archivo favs.json
+  const { t, symbol } = req.body;
+  var archivoNuevo = []
+  //armar el path del archivo api del usuario
+  const path = `${req.decoded.userFolder}/${config.FAVS_FILE}.json`;
+  try {
+    //parseFile del archivo del usuario
+    const content = parseFile(path);
+
+    //recorriendo el archivo que ahora es un array...
+    for (let x = 0; x < content.length; x++) {
+      //buscar dentro del array la t que corresponda
+      const element = content[x];
+      if (element.t === t) {
+        //actualizar los valores n, k, s
+        element.symbol = symbol;
+      } 
+      //agrego al archivo de salido nuevo
+      archivoNuevo.push(element)
+      
+    }
+    //guardar el archivo con los nuevos dtos
+    writeJson(path, archivoNuevo)
+    //devolver ok 200
+    res.status(200).send()
+  } catch (error) {
+    //por el contrario devolver 500
+    res.status(500).send();
+  }
 }
 
 function getAssets(req, res) {
@@ -152,6 +180,7 @@ module.exports = (app) => {
   app.put(apiUrl, decodeToken, updateApi);
   app.delete(apiUrl, decodeToken, deleteApi);
   app.post(favsUrl, decodeToken, addFav);
+  app.put(favsUrl, decodeToken, updateFav);
   app.get(favsUrl, decodeToken, getFavs);
   app.get(assetsUrl, decodeToken, getAssets);
 };

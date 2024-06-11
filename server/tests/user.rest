@@ -40,12 +40,23 @@ content-type: application/json
 
 
 POST http://localhost:4000/user/favorites HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNjgwNTQsImV4cCI6MTcxODE1NDQ1NH0.ojkacjm_vtOSDccpQgc1YPoRNPDtiilUqwIq3DAM18U
 content-type: application/json
 
 {
     "symbol": "AVAXUSDT"
 }
+
+
+PUT http://localhost:4000/user/favorites HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNjgwNTQsImV4cCI6MTcxODE1NDQ1NH0.ojkacjm_vtOSDccpQgc1YPoRNPDtiilUqwIq3DAM18U
+content-type: application/json
+
+{
+    "t":1718068352067,  
+    "symbol": "probando"
+}
+
 
 GET http://localhost:4000/user/favorites HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxYWQ4ODMyODk2MTc0ZjQyZDg0ZTlmYTM5ZTQ4N2QwN2ZlYTQwYjQ5MGM2ZjJmYjQ4NTMzMmI4MjU0NTQyODEiLCJpYXQiOjE3MTgwNDUwMDMsImV4cCI6MTcxODEzMTQwM30.7GQgCanBKFGgcPI8g4rCdprcg6s7fkqjajCuCLbttOg
