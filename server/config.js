@@ -5,6 +5,7 @@ module.exports = {
   DATA_FOLDER: 'data',
   FAVS_FILE: 'favs',
   HISTORY_FOLDER: 'history',
+  PORTFOLIO_FILE: 'portfolio',
   TICKERS_FOLDER: 'tickers',
   TICKERS_FILE: 'tickers',
   TICKERS24_FILE: 'tickers',

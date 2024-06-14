@@ -5,7 +5,8 @@ const routes = [
   require('./historical'),
   require('./orders'),
   require('./service'),
-  require('./user')
+  require('./user'),
+  require('./portfolio')
 ];
 
 module.exports = function router(app) {
