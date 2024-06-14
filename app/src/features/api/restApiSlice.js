@@ -1,25 +1,22 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-const baseUrl = 'http://localhost:4000'
-
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+const baseUrl = "http://localhost:4000";
 
 function authHeader() {
-  var token = sessionStorage.getItem('token')
-  if (token) return { 'Authorization': 'Bearer ' + token }
-  return {}
+  var token = sessionStorage.getItem("token");
+  if (token) return { Authorization: "Bearer " + token };
+  return {};
 }
 
 export const restApiSlice = createApi({
-
-  reducerPath: 'restApi',
+  reducerPath: "restApi",
   baseQuery: fetchBaseQuery({ baseUrl }),
   tagTypes: ["APIs", "Assets", "Klines"],
-  endpoints: builder => ({
-
+  endpoints: (builder) => ({
     login: builder.mutation({
       query: (credential) => ({
         url: "/accounts/login",
         method: "POST",
-        body: credential
+        body: credential,
       }),
     }),
 
@@ -27,81 +24,97 @@ export const restApiSlice = createApi({
       query: (body) => ({
         url: "/accounts/register",
         method: "POST",
-        body
+        body,
       }),
     }),
 
     getApis: builder.query({
-      query: _ => ({
+      query: (_) => ({
         url: "/user/apis",
-        headers: authHeader()
+        headers: authHeader(),
       }),
-      providesTags: ["APIs"]
+      providesTags: ["APIs"],
     }),
 
     addApi: builder.mutation({
       query: (api) => ({
-        url: '/user/apis',
-        method: 'POST',
+        url: "/user/apis",
+        method: "POST",
         headers: authHeader(),
-        body: api
+        body: api,
       }),
-      invalidatesTags: ["APIs"]
+      invalidatesTags: ["APIs"],
     }),
-
+/**
+ * TODO: chequear el sentido de este objeto de dominio
+ */
     getAssets: builder.query({
-      query: _ => ({
+      query: (_) => ({
         url: "/user/assets",
-        headers: authHeader()
+        headers: authHeader(),
       }),
-      providesTags: ["Assets"]
+      providesTags: ["Assets"],
     }),
 
     getHistory: builder.query({
       query: () => ({
         url: `/history`,
-        headers: authHeader()
+        headers: authHeader(),
       }),
-      providesTags: ["Klines"]
+      providesTags: ["Klines"],
     }),
 
     getFavorites: builder.query({
-      query: _ => ({
+      query: (_) => ({
         url: "/user/favorites",
-        headers: authHeader()
-      })
+        headers: authHeader(),
+      }),
     }),
-
+    getPortfolio: builder.query({
+      query: (_) => ({
+        url: "/portfolio",
+        headers: authHeader(),
+      }),
+    }),
     getPairs: builder.query({
-      query: _ => ({
+      query: (_) => ({
         url: "/service/pairs",
-        headers: authHeader()
-      })
+        headers: authHeader(),
+      }),
     }),
 
     getTicker: builder.query({
-      query: symbols => ({
+      query: (symbols) => ({
         url: `/service/ticker?symbols=${JSON.stringify(symbols)}`,
         headers: authHeader(),
-      })
+      }),
     }),
 
     importKlines: builder.mutation({
-      query: ({ interval, granularity, symbol, year, month, day, year2, month2, day2 }) => {
-        var url = `/history/fetch/${interval}/${symbol}/${granularity}/${year}/${month}`
-        if (interval === 'daily') url = `${url}/${day}`
-        if (year2) url = `${url}/${year2}/${month2}`
-        if (year2 && interval === 'daily') url = `${url}/${day2}`
+      query: ({
+        interval,
+        granularity,
+        symbol,
+        year,
+        month,
+        day,
+        year2,
+        month2,
+        day2,
+      }) => {
+        var url = `/history/fetch/${interval}/${symbol}/${granularity}/${year}/${month}`;
+        if (interval === "daily") url = `${url}/${day}`;
+        if (year2) url = `${url}/${year2}/${month2}`;
+        if (year2 && interval === "daily") url = `${url}/${day2}`;
         return {
           url,
           headers: authHeader(),
-        }
+        };
       },
-      invalidatesTags: ["Klines"]
-    })
-
-  })
-})
+      invalidatesTags: ["Klines"],
+    }),
+  }),
+});
 
 // Export the auto-generated hooks for the endpoints
 export const {
@@ -115,4 +128,5 @@ export const {
   useGetPairsQuery,
   useRegisterMutation,
   useGetTickerQuery,
-} = restApiSlice
+  useGetPortfolioQuery
+} = restApiSlice;
