@@ -296,6 +296,7 @@ module.exports = (app) => {
   const apiUrl = baseUrl + "/apis";
   const favsUrl = baseUrl + "/favorites";
   const assetsUrl = baseUrl + "/assets";
+  const tickersUrl = baseUrl + "/tickers"
 
   app.post(apiUrl, decodeToken, addApi);
   app.get(apiUrl, decodeToken, getApis);
